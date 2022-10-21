@@ -1,14 +1,11 @@
-import Button from "./Button"
+import Button from './Button'
 
-const Header = () => {
-    const onClick = () =>{
-        console.log('click')
-    }
+const Header = ({ onAdd, mostrarForm }) => {
 
     return (
-        <header className="header">
+        <header className='header'>
             <h1>Tareas</h1>
-            <Button texto="Agregar" color="green" onClick={onClick} />
+            <Button texto={mostrarForm ? 'Cerrar' : 'Agregar'} color={mostrarForm ? 'red' : 'green'} onClick={onAdd} />
         </header>
     )
 }
